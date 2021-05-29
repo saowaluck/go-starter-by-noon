@@ -9,6 +9,7 @@ func main() {
 	dataTypeAndFVariable()
 	loop()
 	condition()
+	arrayandSlide()
 }
 
 func dataTypeAndFVariable() {
@@ -85,4 +86,16 @@ func condition() {
 	default:
 		fmt.Println("noting")
 	}
+}
+
+func arrayandSlide() {
+	// array (storage memory, fix length)
+	var x = [2]int{1, 2}
+	x[1] = 3
+	fmt.Println(x)
+
+	// slice
+	var y = []int{}
+	y = append(y, 0)
+	fmt.Println(y)
 }
