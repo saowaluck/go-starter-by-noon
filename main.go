@@ -9,7 +9,8 @@ func main() {
 	dataTypeAndFVariable()
 	loop()
 	condition()
-	arrayandSlide()
+	arrayandSlice()
+	makeFunc()
 }
 
 func dataTypeAndFVariable() {
@@ -88,7 +89,7 @@ func condition() {
 	}
 }
 
-func arrayandSlide() {
+func arrayandSlice() {
 	// array (storage memory, fix length)
 	var x = [2]int{1, 2}
 	x[1] = 3
@@ -98,4 +99,16 @@ func arrayandSlide() {
 	var y = []int{}
 	y = append(y, 0)
 	fmt.Println(y)
+}
+
+func makeFunc() {
+	// make use for object has key, value
+	// key : string, value: int
+	m := make(map[string]int)
+	fmt.Println(m)
+
+	m["age"] = 12
+
+	//delete
+	delete(m, "age")
 }
