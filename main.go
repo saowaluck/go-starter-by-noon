@@ -1,10 +1,13 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
 	fmt.Println("yohhh")
 	dataTypeAndFVariable()
+	loop()
 }
 
 func dataTypeAndFVariable() {
@@ -34,4 +37,33 @@ func dataTypeAndFVariable() {
 	// constance
 	const pi float64 = 3.17
 	fmt.Println(pi)
+}
+
+func loop() {
+	// increment loop
+	for i := 0; i < 10; i++ {
+		fmt.Println(i)
+	}
+
+	// for with condition
+	i := 1
+	for i < 5 {
+		i++
+		fmt.Println(i)
+	}
+
+	// for ever (true)
+	for {
+		fmt.Println("loop")
+		if true {
+			break
+		}
+	}
+
+	// for each
+	numbers := []int{1, 2}
+	for i, v := range numbers {
+		fmt.Println(i, v)
+	}
+
 }
