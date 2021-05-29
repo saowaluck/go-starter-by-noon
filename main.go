@@ -11,6 +11,7 @@ func main() {
 	condition()
 	arrayandSlice()
 	makeFunc()
+	plus(1, 2)
 }
 
 func dataTypeAndFVariable() {
@@ -111,4 +112,8 @@ func makeFunc() {
 
 	//delete
 	delete(m, "age")
+}
+
+func plus(num1, num2 int) int {
+	return num1 + num2
 }
