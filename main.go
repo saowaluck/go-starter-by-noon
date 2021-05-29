@@ -12,6 +12,8 @@ func main() {
 	arrayandSlice()
 	makeFunc()
 	plus(1, 2)
+	returnMultiplePlus(1, 2)
+	pointerFunc()
 }
 
 func dataTypeAndFVariable() {
@@ -116,4 +118,24 @@ func makeFunc() {
 
 func plus(num1, num2 int) int {
 	return num1 + num2
+}
+
+func returnMultiplePlus(num1, num2 int) (int, error) {
+	return num1 + num2, fmt.Errorf("error ja")
+}
+
+func pointerFunc() {
+	s := "Hi"
+	fmt.Println(s)
+	sPointer(&s)
+}
+
+func sPointer(s *string) {
+	// get value *
+	// get address &
+	*s = ""
+}
+
+func sStr(s string) {
+	s = ""
 }
