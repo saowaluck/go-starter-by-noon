@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"time"
 )
 
 func main() {
@@ -146,15 +147,20 @@ func sStr(s string) {
 }
 
 type person struct {
-	name string
-	age  int
+	name     string
+	birthday time.Time
 }
 
 func structFunc() {
 	p := person{
-		name: "Noon",
-		age:  30,
+		name:     "Noon",
+		birthday: time.Now(),
 	}
-	p.age = 14
-	fmt.Println(p.name, p.age)
+	fmt.Println(p.name, p.birthday)
+	fmt.Println(p.age())
+}
+
+// reciever func -- method
+func (p *person) age() int {
+	return int(time.Since(p.birthday).Hours() / (24 * 365))
 }
