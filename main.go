@@ -14,6 +14,7 @@ func main() {
 	plus(1, 2)
 	returnMultiplePlus(1, 2)
 	pointerFunc()
+	structFunc()
 }
 
 func dataTypeAndFVariable() {
@@ -142,4 +143,18 @@ func sPointer(s *string) {
 
 func sStr(s string) {
 	s = ""
+}
+
+type person struct {
+	name string
+	age  int
+}
+
+func structFunc() {
+	p := person{
+		name: "Noon",
+		age:  30,
+	}
+	p.age = 14
+	fmt.Println(p.name, p.age)
 }
