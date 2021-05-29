@@ -8,6 +8,7 @@ func main() {
 	fmt.Println("yohhh")
 	dataTypeAndFVariable()
 	loop()
+	condition()
 }
 
 func dataTypeAndFVariable() {
@@ -65,5 +66,23 @@ func loop() {
 	for i, v := range numbers {
 		fmt.Println(i, v)
 	}
+}
 
+func condition() {
+	// if else
+	if 1 == 2 {
+		fmt.Println("1 == 2")
+	} else {
+		fmt.Println("1 !== 2")
+	}
+
+	// switch case
+	switch 1 {
+	case 1:
+		fmt.Println(1)
+	case 2:
+		fmt.Println(2)
+	default:
+		fmt.Println("noting")
+	}
 }
