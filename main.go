@@ -126,8 +126,12 @@ func returnMultiplePlus(num1, num2 int) (int, error) {
 
 func pointerFunc() {
 	s := "Hi"
-	fmt.Println(s)
 	sPointer(&s)
+	fmt.Println(s)
+
+	sStr(s)
+	fmt.Println(s)
+
 }
 
 func sPointer(s *string) {
