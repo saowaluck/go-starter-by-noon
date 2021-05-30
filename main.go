@@ -116,6 +116,10 @@ func makeFunc() {
 
 	//delete
 	delete(m, "age")
+
+	// short hand
+	a := map[string]int{"a": 1}
+	fmt.Println(a)
 }
 
 func plus(num1, num2 int) int {
