@@ -16,6 +16,15 @@ func main() {
 	returnMultiplePlus(1, 2)
 	pointerFunc()
 	structFunc()
+
+	c := cat{}
+	fmt.Println("cat can walk", c.walk())
+
+	d := dog{}
+	fmt.Println("dog can walk", d.walk())
+
+	fmt.Println("can walk", getWalk(&cat{}))
+	fmt.Println("can walk", getWalk(&dog{}))
 }
 
 func dataTypeAndFVariable() {
@@ -167,4 +176,33 @@ func structFunc() {
 // reciever func -- method
 func (p *person) age() int {
 	return int(time.Since(p.birthday).Hours() / (24 * 365))
+}
+
+type animal interface {
+	walk() bool
+	sleep() bool
+}
+
+func getWalk(a animal) bool {
+	return a.walk()
+}
+
+type cat struct{}
+
+func (c *cat) walk() bool {
+	return true
+}
+
+func (c *cat) sleep() bool {
+	return true
+}
+
+type dog struct{}
+
+func (d *dog) walk() bool {
+	return true
+}
+
+func (d *dog) sleep() bool {
+	return true
 }
